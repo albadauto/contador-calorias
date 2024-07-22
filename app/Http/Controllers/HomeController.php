@@ -32,28 +32,24 @@ class HomeController extends Controller
         $totalKcal = 0;
 
         if ($arr) {
-            // Soma das calorias do almoço
             if (count($arr['almoco']) > 0) {
                 foreach ($arr['almoco'] as $item) {
                     $totalKcal += $item->alkcal;
                 }
             }
 
-            // Soma das calorias do jantar
             if (count($arr['jantar']) > 0) {
                 foreach ($arr['jantar'] as $item) {
                     $totalKcal += $item->jantkcal;
                 }
             }
 
-            // Soma das calorias do café da tarde
             if (count($arr['cafetarde']) > 0) {
                 foreach ($arr['cafetarde'] as $item) {
                     $totalKcal += $item->caftkcal;
                 }
             }
 
-            // Soma das calorias do café da manhã
             if (count($arr['cafe']) > 0) {
                 foreach ($arr['cafe'] as $item) {
                     $totalKcal += $item->cafkcal;

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\HomeController;
+use \App\Http\Controllers\RelatorioController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,6 +20,8 @@ Route::prefix('/')->group(function(){
     Route::post('/InserirCafeTarde', [HomeController::class, 'InserirCafeTarde'])->name('home.inserircafetarde');
     Route::post('/InserirCafe', [HomeController::class, 'InserirCafe'])->name('home.inserircafe');
     Route::get('/DeletarKcal/{tabela}/{id}', [HomeController::class, 'DeletarKcal'])->name('home.deletarkcal');
+});
 
-
+Route::prefix('/Relatorio')->group(function(){
+    Route::get('/', [RelatorioController::class, 'Index'])->name('relatorio.index');
 });

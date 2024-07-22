@@ -26,7 +26,7 @@
 
         <div class="row  mb-5">
             <div class="col">
-                <h4>Calorias consumidas hoje: <b>{{ $kcalTotal . ' KCAL'}}  </b>
+                <h4>Calorias consumidas hoje: <b>{{ $kcalTotal . ' KCAL'}} <a href="{{ route("relatorio.index") }}">(Acessar Relatório em PDF)</a>  </b>
                 </h4>
             </div>
         </div>
@@ -229,7 +229,7 @@
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close
                                     </button>
-                                    <button type="submit" class="btn btn-primary">Save changes</button>
+                                    <button type="submit" class="btn btn-primary">Aplicar</button>
                                 </div>
                             </form>
                         </div>
